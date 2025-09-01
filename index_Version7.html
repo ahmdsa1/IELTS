@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IELTS Tutoring with Ahmed Mustafa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts for elegant look -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --secondary: #e0e7ef;
+      --accent: #fbbf24;
+      --background: #f5f6fa;
+      --card-bg: #fff;
+      --shadow: 0 4px 32px 0 rgba(30,58,138,0.08), 0 1.5px 4px #0001;
+      --radius: 18px;
+      --text-main: #232946;
+      --text-muted: #8892b0;
+      --highlight: #34d399;
+      --whatsapp: #25d366;
+    }
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background: var(--background);
+      color: var(--text-main);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(120deg, var(--primary) 70%, var(--accent) 120%);
+      color: #fff;
+      padding: 2rem 1rem 2.5rem 1rem;
+      text-align: center;
+      border-radius: 0 0 var(--radius) var(--radius);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    header h1 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 800;
+      font-size: 2.8em;
+      margin: 0 0 0.5em 0;
+      letter-spacing: 1px;
+    }
+    header p {
+      font-size: 1.25em;
+      margin: 0 auto;
+      max-width: 650px;
+      font-weight: 500;
+      opacity: 0.94;
+    }
+    main {
+      max-width: 740px;
+      margin: 2.5em auto;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 2.2em 2em;
+      position: relative;
+    }
+    .intro {
+      background: var(--secondary);
+      color: var(--primary);
+      border-radius: 13px;
+      padding: 2em 1.2em;
+      font-size: 1.18em;
+      margin-bottom: 2.3em;
+      box-shadow: 0 2px 16px #1e3a8a14;
+      font-family: 'Montserrat', Arial, sans-serif;
+      line-height: 1.7;
+      letter-spacing: 0.3px;
+    }
+    .intro strong {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 1.12em;
+    }
+    h2 {
+      color: var(--primary);
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin-top: 1.3em;
+      margin-bottom: 0.7em;
+      letter-spacing: 1px;
+      font-size: 1.24em;
+      font-weight: 800;
+    }
+    .plans {
+      display: flex;
+      flex-direction: column;
+      gap: 1.65em;
+    }
+    .plan {
+      border: 2px solid var(--primary);
+      border-radius: 15px;
+      padding: 1.7em 1.3em;
+      background: linear-gradient(110deg, var(--card-bg) 70%, var(--secondary) 130%);
+      box-shadow: 0 2px 18px #1e3a8a11, 0 1px 2px #0001;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-family: 'Roboto', Arial, sans-serif;
+      transition: transform 0.12s, border-color 0.12s;
+      position: relative;
+      overflow: hidden;
+    }
+    .plan:hover {
+      transform: translateY(-2.5px) scale(1.025);
+      border-color: var(--highlight);
+      box-shadow: 0 8px 32px #34d39933;
+    }
+    .plan-title {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1.15em;
+      font-weight: 700;
+      margin-bottom: 0.5em;
+      color: var(--primary);
+      letter-spacing: 1px;
+    }
+    .price {
+      color: var(--highlight);
+      font-weight: bold;
+      font-size: 1.08em;
+      margin-bottom: 0.32em;
+    }
+    .plan-details {
+      color: var(--text-muted);
+      font-size: 1.02em;
+      margin-bottom: 0.25em;
+    }
+    .plan-description {
+      margin-bottom: 0.2em;
+      line-height: 1.5;
+    }
+    .contact-section {
+      text-align: center;
+      margin-top: 3em;
+      margin-bottom: 0.5em;
+    }
+    .contact-btn {
+      background: var(--whatsapp);
+      color: #fff;
+      padding: 0.85em 2.3em;
+      border: none;
+      border-radius: 7px;
+      font-size: 1.09em;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px #25d36633, 0 1px 2px #0003;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 1.2em;
+      display: inline-block;
+      transition: background 0.17s, color 0.15s, box-shadow 0.19s;
+    }
+    .contact-btn:hover {
+      background: #128c7e;
+      color: #fff;
+      box-shadow: 0 6px 32px #25d36655;
+    }
+    .contact-btn .wa-icon {
+      vertical-align: middle;
+      margin-right: 0.5em;
+      font-size: 1.2em;
+      position: relative;
+      top: -1px;
+    }
+    .contact-section b {
+      color: var(--primary);
+    }
+    @media (max-width: 700px) {
+      main { padding: 1em 0.1em; }
+      .plans { gap: 1em; }
+      header { font-size: 0.96em; }
+      .plan { font-size: 0.97em; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>IELTS Tutoring with Ahmed Mustafa</h1>
+    <p>Elevate your English. Achieve your goals with expert, bespoke IELTS preparation.</p>
+  </header>
+  <main>
+    <div class="intro">
+      <strong>Welcome, I’m Ahmed Mustafa.</strong><br>
+      As an experienced IELTS tutor, I’m dedicated to helping you unlock your full potential. I understand the journey—its challenges and its triumphs—because I’ve walked it myself. My teaching style is warm, engaging, and tailored to your unique strengths. Together, we work not just towards test results, but towards genuine confidence and mastery in English. With lessons that are interactive and thoughtfully designed, you’ll find learning is not a burden, but an inspiring experience. Let’s build your skills and success, step by step.
+    </div>
+
+    <h2>Your Personalized Learning Journey</h2>
+    <div class="plans">
+      <div class="plan">
+        <div class="plan-title">Starter Plan</div>
+        <div class="price">$20 per lesson</div>
+        <div class="plan-details">2 lessons/week (60 min each)</div>
+        <div class="plan-description">
+          Ideal for students seeking steady progress. We’ll focus on your priorities—whether speaking, writing, listening, or reading—at a comfortable pace, with encouragement at every step.
+        </div>
+      </div>
+      <div class="plan">
+        <div class="plan-title">Intensive Plan</div>
+        <div class="price">$18 per lesson</div>
+        <div class="plan-details">4 lessons/week (60 min each)</div>
+        <div class="plan-description">
+          For ambitious learners ready to accelerate. This plan delivers comprehensive IELTS preparation, in-depth feedback, and extra practice materials—perfect for those aiming for higher band scores in a short timeframe.
+        </div>
+      </div>
+      <div class="plan">
+        <div class="plan-title">Custom/Group Plan</div>
+        <div class="price">Contact for quote</div>
+        <div class="plan-details">Tailored schedule or small group sessions</div>
+        <div class="plan-description">
+          Need a flexible approach or want to study with friends? I offer custom packages and group discounts. Let’s craft a plan that fits your goals and lifestyle.
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-section">
+      <h2>Ready to Begin?</h2>
+      <p>Let’s discuss your aspirations and design a learning plan just for you.<br>
+         <b>Email:</b> <a href="mailto:ahmedsm2929@gmail.com" style="color:var(--primary)">ahmedsm2929@gmail.com</a>
+      </p>
+      <a class="contact-btn"
+         href="https://wa.me/qr/UADHE2F5MLKMM1" target="_blank">
+        <span class="wa-icon">📱</span>Book a Free Consultation Via WhatsApp
+      </a>
+    </div>
+  </main>
+</body>
+</html>
